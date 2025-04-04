@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+	<!-- インプットボックスのフォーム -->
+	<SettingInp>
+		<FormSize Width="500" Height="200" />
+		<FontTitle Name="Meiryo" Size="18" />
+		<FontPrompt Name="Meiryo" Size="14" />
+		<Fonttxt Name="Meiryo" Size="14" />
+	</SettingInp>
+
+	<!-- メッセージボックスのフォーム-->
+	<SettingMsg>
+		<FormSize Width="500" Height="200" />
+		<FontTitle Name="Meiryo" Size="18" />
+		<FontPrompt Name="Meiryo" Size="14" />
+	</SettingMsg>
+</config>
