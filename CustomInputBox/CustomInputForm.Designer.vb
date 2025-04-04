@@ -74,7 +74,7 @@ Partial Class CustomInputForm
         tlpMain.Location = New Point(0, 0)
         tlpMain.Name = "tlpMain"
         tlpMain.RowCount = 4
-        tlpMain.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
+        tlpMain.RowStyles.Add(New RowStyle(SizeType.Percent, 16.66667F))
         tlpMain.RowStyles.Add(New RowStyle(SizeType.Percent, 41.6666679F))
         tlpMain.RowStyles.Add(New RowStyle(SizeType.Percent, 20.833334F))
         tlpMain.RowStyles.Add(New RowStyle(SizeType.Percent, 20.833334F))

@@ -2,7 +2,7 @@
 <config>
 	<!-- インプットボックスのフォーム -->
 	<SettingInp>
-		<FormSize Width="500" Height="200" />
+		<FormSize Width="600" Height="300" />
 		<FontTitle Name="Meiryo" Size="18" />
 		<FontPrompt Name="Meiryo" Size="14" />
 		<Fonttxt Name="Meiryo" Size="14" />
@@ -10,7 +10,7 @@
 
 	<!-- メッセージボックスのフォーム-->
 	<SettingMsg>
-		<FormSize Width="500" Height="200" />
+		<FormSize Width="600" Height="300" />
 		<FontTitle Name="Meiryo" Size="18" />
 		<FontPrompt Name="Meiryo" Size="14" />
 	</SettingMsg>

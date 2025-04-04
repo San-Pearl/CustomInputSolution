@@ -22,64 +22,65 @@ Partial Class CustomMsgForm
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        TableLayoutPanel1 = New TableLayoutPanel()
-        TableLayoutPanel2 = New TableLayoutPanel()
+        tlpMain = New TableLayoutPanel()
+        tlpButton = New TableLayoutPanel()
         btnRight = New Button()
         btnLeft = New Button()
         btnCenter = New Button()
-        lblTitle = New Label()
         lblPrompt = New Label()
-        TableLayoutPanel3 = New TableLayoutPanel()
+        tlpTitle = New TableLayoutPanel()
+        lblTitle = New Label()
         PictureBox1 = New PictureBox()
-        TableLayoutPanel1.SuspendLayout()
-        TableLayoutPanel2.SuspendLayout()
-        TableLayoutPanel3.SuspendLayout()
+        tlpMain.SuspendLayout()
+        tlpButton.SuspendLayout()
+        tlpTitle.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' TableLayoutPanel1
+        ' tlpMain
         ' 
-        TableLayoutPanel1.ColumnCount = 1
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel1.Controls.Add(TableLayoutPanel2, 0, 2)
-        TableLayoutPanel1.Controls.Add(lblPrompt, 0, 1)
-        TableLayoutPanel1.Controls.Add(TableLayoutPanel3, 0, 0)
-        TableLayoutPanel1.Location = New Point(12, 6)
-        TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.RowCount = 3
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 27.272728F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 48.05195F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 24.0259743F))
-        TableLayoutPanel1.Size = New Size(383, 154)
-        TableLayoutPanel1.TabIndex = 0
+        tlpMain.ColumnCount = 1
+        tlpMain.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        tlpMain.Controls.Add(tlpButton, 0, 2)
+        tlpMain.Controls.Add(lblPrompt, 0, 1)
+        tlpMain.Controls.Add(tlpTitle, 0, 0)
+        tlpMain.Dock = DockStyle.Fill
+        tlpMain.Location = New Point(0, 0)
+        tlpMain.Name = "tlpMain"
+        tlpMain.RowCount = 3
+        tlpMain.RowStyles.Add(New RowStyle(SizeType.Percent, 27.450983F))
+        tlpMain.RowStyles.Add(New RowStyle(SizeType.Percent, 48.3660126F))
+        tlpMain.RowStyles.Add(New RowStyle(SizeType.Percent, 24.1830063F))
+        tlpMain.Size = New Size(411, 174)
+        tlpMain.TabIndex = 0
         ' 
-        ' TableLayoutPanel2
+        ' tlpButton
         ' 
-        TableLayoutPanel2.ColumnCount = 7
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 4.16666651F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 27.7777767F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 4.16666651F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 27.7777767F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 4.16666651F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 27.7777767F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 4.16666651F))
-        TableLayoutPanel2.Controls.Add(btnRight, 5, 0)
-        TableLayoutPanel2.Controls.Add(btnLeft, 1, 0)
-        TableLayoutPanel2.Controls.Add(btnCenter, 3, 0)
-        TableLayoutPanel2.Location = New Point(3, 119)
-        TableLayoutPanel2.Name = "TableLayoutPanel2"
-        TableLayoutPanel2.RowCount = 1
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel2.Size = New Size(365, 31)
-        TableLayoutPanel2.TabIndex = 3
+        tlpButton.ColumnCount = 7
+        tlpButton.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 4.16666651F))
+        tlpButton.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 27.7777767F))
+        tlpButton.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 4.16666651F))
+        tlpButton.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 27.7777767F))
+        tlpButton.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 4.16666651F))
+        tlpButton.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 27.7777767F))
+        tlpButton.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 4.16666651F))
+        tlpButton.Controls.Add(btnRight, 5, 0)
+        tlpButton.Controls.Add(btnLeft, 1, 0)
+        tlpButton.Controls.Add(btnCenter, 3, 0)
+        tlpButton.Dock = DockStyle.Fill
+        tlpButton.Location = New Point(3, 134)
+        tlpButton.Name = "tlpButton"
+        tlpButton.RowCount = 1
+        tlpButton.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        tlpButton.Size = New Size(405, 37)
+        tlpButton.TabIndex = 3
         ' 
         ' btnRight
         ' 
         btnRight.Dock = DockStyle.Fill
-        btnRight.Location = New Point(250, 3)
+        btnRight.Location = New Point(275, 3)
         btnRight.Name = "btnRight"
-        btnRight.Size = New Size(95, 25)
+        btnRight.Size = New Size(106, 31)
         btnRight.TabIndex = 2
         btnRight.Text = "Button3"
         btnRight.UseVisualStyleBackColor = True
@@ -87,9 +88,9 @@ Partial Class CustomMsgForm
         ' btnLeft
         ' 
         btnLeft.Dock = DockStyle.Fill
-        btnLeft.Location = New Point(18, 3)
+        btnLeft.Location = New Point(19, 3)
         btnLeft.Name = "btnLeft"
-        btnLeft.Size = New Size(95, 25)
+        btnLeft.Size = New Size(106, 31)
         btnLeft.TabIndex = 0
         btnLeft.Text = "Button1"
         btnLeft.UseVisualStyleBackColor = True
@@ -97,56 +98,56 @@ Partial Class CustomMsgForm
         ' btnCenter
         ' 
         btnCenter.Dock = DockStyle.Fill
-        btnCenter.Location = New Point(134, 3)
+        btnCenter.Location = New Point(147, 3)
         btnCenter.Name = "btnCenter"
-        btnCenter.Size = New Size(95, 25)
+        btnCenter.Size = New Size(106, 31)
         btnCenter.TabIndex = 1
         btnCenter.Text = "Button2"
         btnCenter.UseVisualStyleBackColor = True
-        ' 
-        ' lblTitle
-        ' 
-        lblTitle.AutoSize = True
-        lblTitle.Dock = DockStyle.Fill
-        lblTitle.Location = New Point(49, 0)
-        lblTitle.Name = "lblTitle"
-        lblTitle.Size = New Size(325, 36)
-        lblTitle.TabIndex = 4
-        lblTitle.Text = "Label1"
-        lblTitle.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' lblPrompt
         ' 
         lblPrompt.AutoSize = True
         lblPrompt.Dock = DockStyle.Fill
-        lblPrompt.Location = New Point(3, 42)
+        lblPrompt.Location = New Point(3, 47)
         lblPrompt.Name = "lblPrompt"
-        lblPrompt.Size = New Size(377, 74)
+        lblPrompt.Size = New Size(405, 84)
         lblPrompt.TabIndex = 5
         lblPrompt.Text = "Label1"
         lblPrompt.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' TableLayoutPanel3
+        ' tlpTitle
         ' 
-        TableLayoutPanel3.ColumnCount = 2
-        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.2807016F))
-        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 87.7193F))
-        TableLayoutPanel3.Controls.Add(lblTitle, 1, 0)
-        TableLayoutPanel3.Controls.Add(PictureBox1, 0, 0)
-        TableLayoutPanel3.Dock = DockStyle.Fill
-        TableLayoutPanel3.Location = New Point(3, 3)
-        TableLayoutPanel3.Name = "TableLayoutPanel3"
-        TableLayoutPanel3.RowCount = 1
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel3.Size = New Size(377, 36)
-        TableLayoutPanel3.TabIndex = 6
+        tlpTitle.ColumnCount = 2
+        tlpTitle.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 12.2807016F))
+        tlpTitle.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 87.7193F))
+        tlpTitle.Controls.Add(lblTitle, 1, 0)
+        tlpTitle.Controls.Add(PictureBox1, 0, 0)
+        tlpTitle.Dock = DockStyle.Fill
+        tlpTitle.Location = New Point(3, 3)
+        tlpTitle.Name = "tlpTitle"
+        tlpTitle.RowCount = 1
+        tlpTitle.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        tlpTitle.Size = New Size(405, 41)
+        tlpTitle.TabIndex = 6
+        ' 
+        ' lblTitle
+        ' 
+        lblTitle.AutoSize = True
+        lblTitle.Dock = DockStyle.Fill
+        lblTitle.Location = New Point(52, 0)
+        lblTitle.Name = "lblTitle"
+        lblTitle.Size = New Size(350, 41)
+        lblTitle.TabIndex = 4
+        lblTitle.Text = "Label1"
+        lblTitle.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' PictureBox1
         ' 
         PictureBox1.Dock = DockStyle.Fill
         PictureBox1.Location = New Point(3, 3)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(40, 30)
+        PictureBox1.Size = New Size(43, 35)
         PictureBox1.TabIndex = 5
         PictureBox1.TabStop = False
         ' 
@@ -155,25 +156,25 @@ Partial Class CustomMsgForm
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(411, 174)
-        Controls.Add(TableLayoutPanel1)
+        Controls.Add(tlpMain)
         Name = "CustomMsgForm"
         Text = "CustomMsgForm"
-        TableLayoutPanel1.ResumeLayout(False)
-        TableLayoutPanel1.PerformLayout()
-        TableLayoutPanel2.ResumeLayout(False)
-        TableLayoutPanel3.ResumeLayout(False)
-        TableLayoutPanel3.PerformLayout()
+        tlpMain.ResumeLayout(False)
+        tlpMain.PerformLayout()
+        tlpButton.ResumeLayout(False)
+        tlpTitle.ResumeLayout(False)
+        tlpTitle.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents tlpMain As TableLayoutPanel
     Friend WithEvents btnLeft As Button
     Friend WithEvents btnCenter As Button
     Friend WithEvents btnRight As Button
-    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Friend WithEvents tlpButton As TableLayoutPanel
     Friend WithEvents lblTitle As Label
     Friend WithEvents lblPrompt As Label
-    Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
+    Friend WithEvents tlpTitle As TableLayoutPanel
     Friend WithEvents PictureBox1 As PictureBox
 End Class

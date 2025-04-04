@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CustomInputBoxCshrp\CustomInputBoxCshrp.csproj" />
     <ProjectReference Include="..\CustomInputBox\CustomInputBox.vbproj" />
   </ItemGroup>
 
