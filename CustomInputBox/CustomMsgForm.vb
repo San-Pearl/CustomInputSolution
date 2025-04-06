@@ -13,19 +13,124 @@ Public Class CustomMsgForm
 
     Public Property Choice As UserChoice = UserChoice.None
 
-    Public Sub New(title As String, prompt As String, btnLtxt As String, btnCtxt As String, btnRtxt As String)
+    ''' <summary>
+    ''' メッセージボックスを表示する
+    ''' </summary>
+    ''' <param name="title">タイトル</param>
+    ''' <param name="prompt">説明</param>
+    ''' <param name="img">イメージ(inf(I),war(!),err(×))</param>
+    ''' <param name="btnLtxt">左ボタン名</param>
+    ''' <param name="btnCtxt">中央ボタン名</param>
+    ''' <param name="btnRtxt">右ボタン名</param>
+    Public Sub New(title As String, prompt As String, Optional btnLtxt As String = "", Optional btnCtxt As String = "OK", Optional btnRtxt As String = "", Optional img As Integer = 0)
         InitializeComponent()
         lblTitle.Text = title
         lblPrompt.Text = prompt
-        'PictureBox1.Image =
-        Dim imagePath As String = IO.Path.Combine(Application.StartupPath, "img\inf.png")
-
-        If IO.File.Exists(imagePath) Then
-            PictureBox1.Image = Image.FromFile(imagePath)
-            PictureBox1.SizeMode = PictureBoxSizeMode.Zoom ' または StretchImage など
+        If btnLtxt <> "" Then
+            btnLeft.Text = btnLtxt
+            btnLeft.Visible = True
         Else
-            MessageBox.Show("画像ファイルが見つかりません: " & imagePath)
+            btnLeft.Visible = False
         End If
+
+        If btnCtxt <> "" Then
+            btnCenter.Text = btnCtxt
+            btnCenter.Visible = True
+        Else
+            btnCenter.Visible = False
+        End If
+
+        If btnRtxt <> "" Then
+            btnRight.Text = btnRtxt
+            btnRight.Visible = True
+        Else
+            btnRight.Visible = False
+        End If
+
+        Select Case img
+            Case 0
+                Dim imagePath As String = IO.Path.Combine(Application.StartupPath, "img\inf.png")
+                If IO.File.Exists(imagePath) Then
+                    PictureBox1.Image = Image.FromFile(imagePath)
+                    PictureBox1.SizeMode = PictureBoxSizeMode.Zoom ' または StretchImage など
+                Else
+                    MessageBox.Show("画像ファイルが見つかりません: " & imagePath)
+                End If
+            Case 1
+                Dim imagePath As String = IO.Path.Combine(Application.StartupPath, "img\warning.png")
+                If IO.File.Exists(imagePath) Then
+                    PictureBox1.Image = Image.FromFile(imagePath)
+                    PictureBox1.SizeMode = PictureBoxSizeMode.Zoom ' または StretchImage など
+                Else
+                    MessageBox.Show("画像ファイルが見つかりません: " & imagePath)
+                End If
+            Case 2
+                Dim imagePath As String = IO.Path.Combine(Application.StartupPath, "img\err.png")
+                If IO.File.Exists(imagePath) Then
+                    PictureBox1.Image = Image.FromFile(imagePath)
+                    PictureBox1.SizeMode = PictureBoxSizeMode.Zoom ' または StretchImage など
+                Else
+                    MessageBox.Show("画像ファイルが見つかりません: " & imagePath)
+                End If
+        End Select
+
+    End Sub
+
+    Public Sub New(title As String, prompt As String, Optional btnCtxt As String = "OK", Optional img As Integer = 0)
+        InitializeComponent()
+
+        lblTitle.Text = title
+        lblPrompt.Text = prompt
+        'If btnLtxt <> "" Then
+        'btnLeft.Text = btnLtxt
+        'btnLeft.Visible = True
+        'Else
+        btnLeft.Visible = False
+        'End If
+
+        If btnCtxt <> "" Then
+            btnCenter.Text = btnCtxt
+            btnCenter.Visible = True
+        Else
+            btnCenter.Visible = False
+        End If
+
+        'If btnRtxt <> "" Then
+        'btnRight.Text = btnRtxt
+        btnRight.Visible = True
+        'Else
+        'btnRight.Visible = False
+        'End If
+
+        Select Case img
+            Case 0
+                Dim imagePath As String = IO.Path.Combine(Application.StartupPath, "img\inf.png")
+                If IO.File.Exists(imagePath) Then
+                    PictureBox1.Image = Image.FromFile(imagePath)
+                    PictureBox1.SizeMode = PictureBoxSizeMode.Zoom ' または StretchImage など
+                Else
+                    MessageBox.Show("画像ファイルが見つかりません: " & imagePath)
+                End If
+            Case 1
+                Dim imagePath As String = IO.Path.Combine(Application.StartupPath, "img\warning.png")
+                If IO.File.Exists(imagePath) Then
+                    PictureBox1.Image = Image.FromFile(imagePath)
+                    PictureBox1.SizeMode = PictureBoxSizeMode.Zoom ' または StretchImage など
+                Else
+                    MessageBox.Show("画像ファイルが見つかりません: " & imagePath)
+                End If
+            Case 2
+                Dim imagePath As String = IO.Path.Combine(Application.StartupPath, "img\err.png")
+                If IO.File.Exists(imagePath) Then
+                    PictureBox1.Image = Image.FromFile(imagePath)
+                    PictureBox1.SizeMode = PictureBoxSizeMode.Zoom ' または StretchImage など
+                Else
+                    MessageBox.Show("画像ファイルが見つかりません: " & imagePath)
+                End If
+            Case Else
+
+        End Select
+
 
         'txtInput.Text = defStr
 

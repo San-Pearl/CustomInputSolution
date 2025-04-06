@@ -3,9 +3,12 @@
 
     'Dim dlg As New CustomInputBox()
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim inp As New CustomInputBox.CustomMsgForm("タイトル", "プロンプト", "", "", "")
+        'title As String, prompt As String, Optional btnLtxt As String = "", Optional btnCtxt As String = "OK", Optional btnRtxt As String = "", Optional img As Integer = 0
+        Dim inp As New CustomInputBox.CustomMsgForm(title:="タイトル", prompt:="プロンプト", btnLtxt:="", btnCtxt:="", btnRtxt:="了解", img:=0)
+        'Dim inp As New CustomInputBox.CustomMsgForm("タイトル", "プロンプト", "了解", 1)
+        'Dim inp As New CustomInputBox.CustomMsgForm(title:="タイトル", prompt:="メッセージ", btnCtxt:="了解", img:=1)
         If inp.ShowDialog() = DialogResult.OK Then
-            MessageBox.Show("入力された名前：" & inp.Choice)
+            MessageBox.Show("押下したボタンは、" & inp.Choice)
         End If
     End Sub
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
